@@ -1,19 +1,48 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Каталог электронных книг</title>
-    </head>
-    <body>
-        <h1></h1>
+﻿<?php
+$Me->title = "Каталог электронных книг";
+$Me->content = "OLOLO";
+$Me->htmlClasses["leftmenu"] = array();
+$Me->htmlClasses["leftmenu"]["main"] = "active";
+
+
+?>
+
+        <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Інвентарний номер</th>
+                <th>Автор</th>
+                <th>Position</th>
+                <th>Редактор</th>
+
+            </tr>
+            <tr>
+                <th>Інвентарний номер</th>
+                <th>Автор</th>
+                <th>Position</th>
+                <th>Редактор</th>
+
+            </tr>
+        </thead>
         
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+        <tfoot>
+            <tr>
+                <th>Інвентарний номер</th>
+                <th>Автор</th>
+                <th>Position</th>
+                <th>Редактор</th>
+
+            </tr>
+        </tfoot>
+        </table>
+        <script>
+      $(document).ready(function() {
+    $('#example').dataTable( {
+        "processing": true,
+        "serverSide": true,
+        "oClasses": {input: "form-control",table: "form-control"},
+        //"oLanguage": "ru",
+        "ajax": "/ajax/tabler.php"
+    } );
+} );  
+        </script>
