@@ -16,8 +16,10 @@ class thisapp {
     public $kw;
     public $content;
     public $htmlClasses = array();
+    public $siteUrl;
     public function __construct() {
         $this->title="";
+        
     }
     
     public function setTitle($newTit){
