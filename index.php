@@ -31,13 +31,13 @@ $me->tmpl = __DIR__.'/templates/t.search.php';
 $app->get("/categories:{ckey}", function ($ckey){
 global $me,$tmpl,$view;
 $me->params["ckey"]=$ckey;
-$me->view = __DIR__.'/views/v.counters.php';
-$me->tmpl = __DIR__.'/templates/t.counters.php';
+$me->view = __DIR__.'/views/v.categories.php';
+$me->tmpl = __DIR__.'/templates/t.categories.php';
 
     return "";
 })
-->assert('ckey', 'gas|water|electro')
-->value('ckey', 'gas');
+->assert('ckey', 'none')
+->value('ckey', 'none');
 
 $app->get("/charts:{ckey}", function ($ckey){
 global $me,$tmpl,$view;
@@ -47,14 +47,14 @@ $me->tmpl = __DIR__.'/templates/t.charts.php';
 
     return "";
 })
-->assert('ckey', 'gas|water|electro')
-->value('ckey', 'gas');
+->assert('ckey', 'none')
+->value('ckey', 'none');
 
 $app->get("/docs:{ckey}", function ($ckey){
 global $me,$tmpl,$view;
 $me->params["ckey"]=$ckey;
-$me->view = __DIR__.'/views/v.counters.php';
-$me->tmpl = __DIR__.'/templates/t.counters.php';
+$me->view = __DIR__.'/views/v.docs.php';
+$me->tmpl = __DIR__.'/templates/t.docs.php';
 
     return "";
 });

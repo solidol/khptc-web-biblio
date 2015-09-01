@@ -44,7 +44,7 @@
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
-		
+<!--		
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<form role="search">
 			<div class="form-group">
@@ -123,7 +123,42 @@
 			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
-		
+-->
+ 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			<li class=" <?=$Me->htmlClasses["leftmenu"]["main"]?>"><a href="/"><span class="glyphicon glyphicon-dashboard"></span> Головна</a></li>
+			<li class=" <?=$Me->htmlClasses["leftmenu"]["all"]?>"><a href="/index.php/all"><span class="glyphicon glyphicon-th"></span> Усі книги</a></li>
+			<li class="parent ">
+				<a href="#">
+					<span class="glyphicon glyphicon-list"></span> Пошук<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
+				</a>
+				<ul class="children collapse" id="sub-item-1">
+					<li>
+						<a class="" href="#">
+							<span class="glyphicon glyphicon-share-alt"></span> Простий пошук
+						</a>
+					</li>
+					<li>
+						<a class=" <?=$Me->htmlClasses["leftmenu"]["advsearch"]?>" href="/index.php/advsearch">
+							<span class="glyphicon glyphicon-share-alt"></span> Розширений пошук
+						</a>
+					</li>
+
+				</ul>
+			</li>			<li class=" <?=$Me->htmlClasses["leftmenu"]["aa"]?>"><a href="charts.html"><span class="glyphicon glyphicon-stats"></span></a></li>
+			<li class=" <?=$Me->htmlClasses["leftmenu"]["about"]?>"><a href="index.php/about"><span class="glyphicon glyphicon-list-alt"></span> Інструкція користувача</a></li>
+
+
+			<li role="presentation" class="divider"></li>
+			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->       
+        
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">	
     	<div class="row">
 			<ol class="breadcrumb"><!--
