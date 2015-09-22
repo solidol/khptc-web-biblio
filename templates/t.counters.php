@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 switch ($thecounter->role){
 case "gas":
     ?>

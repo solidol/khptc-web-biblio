@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -123,7 +123,7 @@
 			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
--->
+
  	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<form role="search">
 			<div class="form-group">
@@ -131,8 +131,8 @@
 			</div>
 		</form>
 		<ul class="nav menu">
-			<li class=" <?=$Me->htmlClasses["leftmenu"]["main"]?>"><a href="/"><span class="glyphicon glyphicon-dashboard"></span> Головна</a></li>
-			<li class=" <?=$Me->htmlClasses["leftmenu"]["all"]?>"><a href="/index.php/all"><span class="glyphicon glyphicon-th"></span> Усі книги</a></li>
+			<li class=" <?=$me->m["leftmenu"]["main"]?>"><a href="<?=$me->siteurl?>/"><span class="glyphicon glyphicon-dashboard"></span> Головна</a></li>
+			<li class=" <?=$me->m["leftmenu"]["all"]?>"><a href="<?=$me->siteurl?>/index.php/all"><span class="glyphicon glyphicon-th"></span> Усі книги</a></li>
 			<li class="parent ">
 				<a href="#">
 					<span class="glyphicon glyphicon-list"></span> Пошук<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
@@ -144,14 +144,14 @@
 						</a>
 					</li>
 					<li>
-						<a class=" <?=$Me->htmlClasses["leftmenu"]["advsearch"]?>" href="/index.php/advsearch">
+						<a class=" <?=$me->m["leftmenu"]["advsearch"]?>" href="<?=$me->siteurl?>/index.php/advsearch">
 							<span class="glyphicon glyphicon-share-alt"></span> Розширений пошук
 						</a>
 					</li>
 
 				</ul>
-			</li>			<li class=" <?=$Me->htmlClasses["leftmenu"]["aa"]?>"><a href="charts.html"><span class="glyphicon glyphicon-stats"></span></a></li>
-			<li class=" <?=$Me->htmlClasses["leftmenu"]["about"]?>"><a href="index.php/about"><span class="glyphicon glyphicon-list-alt"></span> Інструкція користувача</a></li>
+			</li>			<li class=" <?=$me->m["leftmenu"]["aa"]?>"><a href="<?=$me->siteurl?>/charts.html"><span class="glyphicon glyphicon-stats"></span></a></li>
+			<li class=" <?=$me->m["leftmenu"]["about"]?>"><a href="<?=$me->siteurl?>/index.php/about"><span class="glyphicon glyphicon-list-alt"></span> Інструкція користувача</a></li>
 
 
 			<li role="presentation" class="divider"></li>

@@ -5,7 +5,7 @@ require_once __DIR__.'/../classes/ssp.class.php';
 
 $DB = array(
     'dbhost' => 'localhost',
-    'dbname' => 'biblio',
+    'dbname' => 'biblioteka',
     'user' => 'root',
     'password' => ''
     );

@@ -25,7 +25,7 @@ class thisapp {
     public $tmpl;
 
     public function __construct($role=false) {
-        $this->siteurl="http://localhost/bib";
+        $this->siteurl="http://test1.ru";
         ($role)?$this->role=$role:$this->role="common";
         $this->title="";
         $this->name="<span>ХПТК ОНПУ </span> Онлай-бібліотека";

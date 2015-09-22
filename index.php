@@ -18,6 +18,14 @@ $me->tmpl = __DIR__.'/templates/t.startpage.php';
 
     return "";
 });
+
+$app->get("/all", function (){
+global $me,$tmpl,$view;
+$me->view = __DIR__.'/views/v.all.php';
+$me->tmpl = __DIR__.'/templates/t.all.php';
+
+    return "";
+});
     
     
 $app->post("/search", function () use ($app){
