@@ -5,7 +5,7 @@ require_once __DIR__.'/global/global.php';
 
 $app = new Silex\Application();
 
-
+$theBook = "";
 $me->tmpl = "";
 $me->view = "";
 
@@ -23,11 +23,25 @@ $app->get("/all", function (){
 global $me,$tmpl,$view;
 $me->view = __DIR__.'/views/v.all.php';
 $me->tmpl = __DIR__.'/templates/t.all.php';
-
     return "";
 });
-    
-    
+
+$app->get("/book:{bkey}", function ($bkey){
+global $me,$tmpl,$view,$theBook;
+$theBook = new Book($bkey);
+$me->params["bkey"]=$bkey;
+$me->view = __DIR__.'/views/v.book.php';
+$me->tmpl = __DIR__.'/templates/t.book.php';
+    return "";
+});
+
+$app->get("/advsearch", function (){
+global $me,$tmpl,$view;
+$me->view = __DIR__.'/views/v.advsearch.php';
+$me->tmpl = __DIR__.'/templates/t.advsearch.php';
+    return "";
+});
+
 $app->post("/search", function () use ($app){
 global $me,$tmpl,$view;
     $request = $app['request'];

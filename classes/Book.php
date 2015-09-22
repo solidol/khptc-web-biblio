@@ -16,6 +16,10 @@ class Book {
     public $book_id;
     public $blank_id;
     public $sql;
+    public $author;
+    public $bname;
+    public $year;
+    public $annotation;
     public function __construct($book = false){
 
         if (isset($book) and is_numeric($book)) 
@@ -30,7 +34,13 @@ class Book {
     public function initBook($book){
         if (!isset($book) or !  is_numeric($book)) return false;
         $this->book_id = $book;
-
+        $this->sql="SELECT * FROM e_knigi_utf8 WHERE kod = ".$this->book_id;
+        $result = mysql_query($this->sql) or die(mysql_error());
+        while ($arResult[] = mysql_fetch_array($result)){}
+        $this->author = $arResult[0]['avtor'];
+        $this->bname = $arResult[0]['nazva'];
+        $this->year = $arResult[0]['god_izd'];
+        $this->annotation = $arResult[0]['annotation'];
         return $this->book_id;
     }
     

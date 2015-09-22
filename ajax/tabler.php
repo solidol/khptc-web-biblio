@@ -19,7 +19,7 @@
  */
 require_once __DIR__.'/../classes/ssp.class.php'; 
 // DB table to use
-$table = 'e_knigi';
+$table = 'e_knigi_utf8';
  
 // Table's primary key
 $primaryKey = 'kod';
@@ -29,10 +29,11 @@ $primaryKey = 'kod';
 // parameter represents the DataTables column identifier. In this case simple
 // indexes
 $columns = array(
-    array( 'db' => 'kod', 'dt' => 0 ),
+    array( 'db' => 'kod',  'dt' => 0 ),
     array( 'db' => 'avtor',  'dt' => 1 ),
     array( 'db' => 'nazva',   'dt' => 2 ),
-    array( 'db' => 'god_izd',     'dt' => 3 )/*,
+    array( 'db' => 'god_izd',     'dt' => 3 ),
+    array( 'db' => 'lang', 'dt' => 4 )/*,
     array(
         'db'        => 'start_date',
         'dt'        => 4,
@@ -53,7 +54,7 @@ $columns = array(
 $sql_details = array(
     'user' => 'root',
     'pass' => '',
-    'db'   => 'biblioteka',
+    'db'   => 'bibl',
     'host' => 'localhost'
 );
  
