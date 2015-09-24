@@ -39,6 +39,7 @@ $(document).ready(function() {
             console.log(s);
             return location.href = "<?=$me->siteurl?>/index.php/book:"+s;
     } );
+
 } );
 
 </script>

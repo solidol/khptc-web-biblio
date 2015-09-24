@@ -20,6 +20,8 @@ class Book {
     public $bname;
     public $year;
     public $annotation;
+    public $img;
+    public $fileurl;
     public function __construct($book = false){
 
         if (isset($book) and is_numeric($book)) 
@@ -41,6 +43,9 @@ class Book {
         $this->bname = $arResult[0]['nazva'];
         $this->year = $arResult[0]['god_izd'];
         $this->annotation = $arResult[0]['annotation'];
+        $this->img = ( !in_array($arResult[0]['titul'], array(null,"")))?
+                $arResult[0]['titul']:null;
+        $this->fileurl = $arResult[0]['file'];
         return $this->book_id;
     }
     
