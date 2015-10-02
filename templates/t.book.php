@@ -11,6 +11,7 @@
                     <h3>
                         ISBN: 1526875967253
                     </h3>
+                    <!--<a class="form-control" href="<?=$me->siteurl."/index.php/download:".basename(str_replace("\\","/", $theBook->fileurl),".*")?>">-->
                     <a class="form-control" href="<?=$me->siteurl."/".str_replace("\\","/", $theBook->fileurl)?>">
                     Завантажити
                     </a>

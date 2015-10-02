@@ -44,90 +44,12 @@
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
-<!--		
-	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<form role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-		</form>
-		<ul class="nav menu">
-			<li class=" <?=$me->m["leftmenu"]["main"]?>"><a href="<?=$me->siteurl?>/"><span class="glyphicon glyphicon-dashboard"></span> Главная</a></li>
-			<li class="parent  <?=$me->m["leftmenu"]["counters"]?>">
-				<a href="#">
-					<span class="glyphicon glyphicon-list"></span> Все показания<span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
-				</a>
-				<ul class="children collapse <?=$me->m["leftmenu"]["counters.act"]?>" id="sub-item-1">
-					<li>
-						<a class=" <?=$me->m["leftmenu"]["counters.gas"]?>" href="<?=$me->siteurl?>/index.php/counters:gas">
-							<span class="glyphicon glyphicon-share-alt"></span> Газ
-						</a>
-					</li>
-					<li>
-						<a class=" <?=$me->m["leftmenu"]["counters.water"]?>" href="<?=$me->siteurl?>/index.php/counters:water">
-							<span class="glyphicon glyphicon-share-alt"></span> Вода
-						</a>
-					</li>
-                                        <li>
-						<a class=" <?=$me->m["leftmenu"]["counters.electro"]?>" href="<?=$me->siteurl?>/index.php/counters:water">
-							<span class="glyphicon glyphicon-share-alt"></span> Свет
-						</a>
-					</li>
-				</ul>
-			</li>			
-                        <li class=" <?=$me->m["leftmenu"]["tarif"]?>"><a href="<?=$me->siteurl?>/index.php/tarif"><span class="glyphicon glyphicon-th"></span> Тарифы на услуги</a></li>
-			<li class="parent  <?=$me->m["leftmenu"]["docs"]?>">
-				<a href="#">
-					<span class="glyphicon glyphicon-list"></span> Документы<span data-toggle="collapse" href="#sub-item-2" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
-				</a>
-				<ul class="children collapse <?=$me->m["leftmenu"]["docs.act"]?>" id="sub-item-2">
-					<li>
-						<a class=" <?=$me->m["leftmenu"]["docs.controllers"]?>" href="<?=$me->siteurl?>/index.php/docs:controllers">
-							<span class="glyphicon glyphicon-share-alt"></span> Контроль показаний
-						</a>
-					</li>
-					<li>
-						<a class=" <?=$me->m["leftmenu"]["docs.rechecks"]?>" href="<?=$me->siteurl?>/index.php/docs:rechecks">
-							<span class="glyphicon glyphicon-share-alt"></span> Проверки счетчиков
-						</a>
-					</li>
 
-				</ul>
-			</li>			
-                        <li class="parent  <?=$me->m["leftmenu"]["charts"]?>">
-				<a href="#">
-					<span class="glyphicon glyphicon-list"></span> Потребления<span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span> 
-				</a>
-				<ul class="children collapse <?=$me->m["leftmenu"]["charts.act"]?>" id="sub-item-3">
-					<li>
-						<a class=" <?=$me->m["leftmenu"]["charts.gas"]?>" href="<?=$me->siteurl?>/index.php/charts:gas">
-							<span class="glyphicon glyphicon-share-alt"></span> Газ
-						</a>
-					</li>
-					<li>
-						<a class=" <?=$me->m["leftmenu"]["charts.water"]?>" href="<?=$me->siteurl?>/index.php/charts:water">
-							<span class="glyphicon glyphicon-share-alt"></span> Вода
-						</a>
-					</li>
-					<li>
-						<a class=" <?=$me->m["leftmenu"]["charts.water"]?>" href="<?=$me->siteurl?>/index.php/charts:electro">
-							<span class="glyphicon glyphicon-share-alt"></span> Свет
-						</a>
-					</li>
-				</ul>
-			</li>			
-			<li class=" <?=$me->m["leftmenu"]["about"]?>"><a href="index.php/about"><span class="glyphicon glyphicon-list-alt"></span> Інструкція користувача</a></li>
-
-
-			<li role="presentation" class="divider"></li>
-			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
-		</ul>
-	</div><!--/.sidebar-->
 
  	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<form role="search">
+		<form role="search" action="<?=$me->siteurl?>/index.php/search" method="POST">
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
+				<input type="text" class="form-control" placeholder="Пошук">
 			</div>
 		</form>
 		<ul class="nav menu">
@@ -150,12 +72,14 @@
 					</li>
 
 				</ul>
-			</li>			<li class=" <?=$me->m["leftmenu"]["aa"]?>"><a href="<?=$me->siteurl?>/charts.html"><span class="glyphicon glyphicon-stats"></span></a></li>
-			<li class=" <?=$me->m["leftmenu"]["about"]?>"><a href="<?=$me->siteurl?>/index.php/about"><span class="glyphicon glyphicon-list-alt"></span> Інструкція користувача</a></li>
-
-
+			</li>			
+                        <li class=" <?=$me->m["leftmenu"]["aa"]?>"><a href="<?=$me->siteurl?>/charts.html"><span class="glyphicon glyphicon-stats"></span></a></li>
 			<li role="presentation" class="divider"></li>
-			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+                        <li class=" <?=$me->m["leftmenu"]["about"]?>"><a href="<?=$me->siteurl?>/index.php/about"><span class="glyphicon glyphicon-list-alt"></span> Інструкція користувача</a></li>
+
+
+			
+			
 		</ul>
 	</div><!--/.sidebar-->       
         

@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 require_once __DIR__.'/global/global.php';
-
+use Symfony\Component\HttpFoundation\Response;
 $app = new Silex\Application();
 
 $theBook = "";
@@ -17,6 +17,25 @@ $me->view = __DIR__.'/views/v.startpage.php';
 $me->tmpl = __DIR__.'/templates/t.startpage.php';
 
     return "";
+});
+
+$app->get("/download:{bkey}", function ($bkey){
+global $me,$tmpl,$view,$theBook;
+$theBook = new Book($bkey);
+$file=$me->siteurl."/e_books/".$bkey."/".$bkey.".pdf";
+return new Response(
+            readfile(),
+            200,
+            array('Content-Description' => 'File Transfer',
+         'Content-Type' => 'application/octet-stream',
+     'Content-Disposition' => 'attachment; filename=' . basename($file),
+     'Content-Transfer-Encoding' => 'binary',
+     'Expires' => '0',
+     'Cache-Control' => 'must-revalidate',
+     'Pragma' => 'public',
+     'Content-Length' => filesize($file),
+            'Content-Type' => 'application/pdf')
+        );
 });
 
 $app->get("/all", function (){
@@ -81,6 +100,13 @@ $me->tmpl = __DIR__.'/templates/t.docs.php';
     return "";
 });
 
+$app->get("/about", function (){
+global $me,$tmpl,$view;
+$me->view = __DIR__.'/views/v.a.php';
+$me->tmpl = __DIR__.'/templates/t.a.php';
+
+    return "";
+});
 
 
 $app->error(function (\Exception $e, $code) {
